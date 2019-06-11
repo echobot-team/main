@@ -2,9 +2,9 @@ import time, sys, random, re
 #hardcoded
 responses = {
 "what's your name?": [
-                      "my name is EchoBot",
-                      "they call me EchoBot",
-                      "they know me as Echobot"],"hello":["hello","hallo"]
+                      "My name is EchoBot",
+                      "They call me EchoBot",
+                      "They know me as Echobot"],"Hello":["Hello","Hallo"]
 }
 
 def swap_pronouns(phrase):
@@ -46,12 +46,12 @@ def send_message(message):
         #history += argument
         res = response(argument)
         ant = "Echobot: "+res
-            print("Echobot is typing...")
+            print("I am typing...")
             time.sleep(random.randrange(1,5))
             print(ant)
 def askname():
-    noname = ["typing youre name is not that dificult, try again!", "no name, no chat!", "youre real name!, try again!", "youre name cant be nothing!", "I gave my name now it is youre turn, try again!", "youre name please"]
-    name = input("Echobot: what's youre name? ")
+    noname = ["typing your name is not that difficult, try again!", "no name, no chat!", "your real name!, try again!", "you're name cant be nothing!", "I gave my name now it is your turn, try again!", "you're name please"]
+    name = input("Echobot: what's your name? ")
     if name == "" or name == " ":
     print("echobot: "+random.choice(noname))
     return name
