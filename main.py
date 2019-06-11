@@ -6,14 +6,20 @@ responses = {
                       "They call me EchoBot",
                       "They know me as Echobot"],"Hello":["Hello","Hallo"]
 }
-
+#swap pronouns
 def swap_pronouns(phrase):
+    #save the variable
+    phrase = phrase
+    #check for pronouns
     if 'I' in phrase:
-    return re.sub('I', 'you', phrase)
+        phrase = re.sub('I', 'you', phrase)
     if 'my' in phrase:
-        return re.sub('my', 'your', phrase)
-    else:
-        return phrase
+        phrase = re.sub('my', 'your', phrase)
+    if 'me' in phrase:
+        phrase = re.sub('me', 'you', phrase)
+#   return the checked text
+    return phrase
+
 nomessage = ["I cant answer to nothing", "say something!",  "I lose intrest when I get ignored", "silence is an answer Too but not one where I can do something with", "I didn't text you just to exercise my fingers!, I was expecting a reply back"]
 pattern_responses = {"do you remember (.*)":["Of course I remember {}","Yes I do remember {}"],
     "i feel (.*)":["Why do you feel {}","You feel {}, why?"],"what can (.*)": ["I can do a lot", "what do you want me to do?"], "hallo(.*)": ["Hallo", "hallo, what can I do for you?"],"can you(.*)":["can you?", "I can", "I can make {}"], "how are(.*)":["Im doing good", "Im fine"],"can i(.*)":["Do you want to?", "you can!"],"who(.*)":["I am echobot", "does it matter?", "They call me echobot", "Do you know how {} is?"],"echobot":["That is my name", "Hello"]}
