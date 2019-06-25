@@ -9,14 +9,14 @@ responses = {
 #swap pronouns function
 def swap_pronouns(phrase):
   phrase = phrase
-  if 'i' in phrase:
+  if ' i' in phrase:
     #print("test")
-    phrase = re.sub('i', 'you', phrase)
+    phrase = re.sub(' i', ' you', phrase)
     #print(phrase)
-  if 'my' in phrase:
-    phrase = re.sub('my', 'your', phrase)
-  if 'me' in phrase:
-    phrase = re.sub('me', 'you', phrase)
+  if ' my' in phrase:
+    phrase = re.sub(' my', ' your', phrase)
+  if ' me' in phrase:
+    phrase = re.sub(' me', ' you', phrase)
   return phrase
 #list with messages if there is no input typed.
 nomessage = ["I cant answer to nothing", "Say something!",  "I lose intrest when I get ignored", "Silence is an answer too but not one where I can do something with", "I didn't text you just to exercise my fingers!, I was expecting a reply back"]
